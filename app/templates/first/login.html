@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录界面</title>
+</head>
+<body>
+    <h2>用户登录界面</h2>
+    {%for message in get_flashed_messages()%}
+        <b style="color:red">{{message}}</b>
+    {%endfor%}
+    <hr>
+    <form action="{{url_for('first.login')}}" method="post">
+        <p>用户名:<input type="text" name="username" id=""></p>
+            
+        <p>密码: <input type="text" name="pwd" id=""></p>
+
+        <input type="submit" value="登录">
+    </form>
+    <a href='{{url_for("first.register")}}'>注册账号</a>
+</body>
+</html>

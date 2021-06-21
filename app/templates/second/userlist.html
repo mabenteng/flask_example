@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    后台用户管理页面
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+<h2>个人信息页面</h2>
+    
+<ol>
+    {% for user in pagination.items %}
+    <li>名字:{{user.username}}-----ID:{{user.id}}-----电话:{{ user.phone|default('无',boolean=True) }}</li>
+    {% endfor %}
+</ol>
+{% from "bootstrap/pagination.html" import render_pagination %}
+{{ render_pagination(pagination,"second.userlist") }}
+</div>
+{% endblock content %}

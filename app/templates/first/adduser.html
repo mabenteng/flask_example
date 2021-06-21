@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flaske 添加用户</title>
+</head>
+<body>
+    <h2>添加用户</h2>
+    <form action="{{url_for('first.adduser')}}" method="post">
+
+        <ul>
+            <li>用户名<input type="text" name="username"></li>
+            <li>地址<input type="text" name="addr"></li>
+            <li>年龄<input type="text" name="age"></li>
+        </ul>
+        <button type="submit">添加</button>
+    </form>
+</body>
+</html>

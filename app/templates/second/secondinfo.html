@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    个人信息页面
+{% endblock title %}
+{% block content %}
+<div class="container">
+<h2>个人信息页面</h2>
+    
+    {% for msg in get_flashed_messages() %}
+    <div class="alert alert-success" role="alert">{{msg}}</div>
+    {%endfor%}
+    <hr>
+    <p>用户名:{{user.username}}</p>
+    <p>用户密码:{{user.pwd}}</p>
+    <p>手机号:<input type="text" name="phone"><button id="btnp">保存</button></p>
+    <a href="{{url_for('second.login')}}" >点击去登录</a>    <a href="{{url_for('second.logout')}}">退出登录</a>
+
+
+</div>
+{% endblock content %}

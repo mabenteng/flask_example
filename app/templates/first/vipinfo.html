@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vip用户中心</title>
+</head>
+<body>
+    <h3>用户个人信息页面</h3>
+    <!-- 消息闪现处理,就是用户注册成功了 -->
+    {%for msg in get_flashed_messages()%}
+    <b>{{msg}}</b>
+    {%endfor%}
+    <hr>
+    <p>用户名:{{user.username}}</p>
+    <p>用户密码:{{user.pwd}}</p>
+    <p>手机号:<input type="text" name="phone"><button id="btnp">保存</button></p>
+</body>
+</html>
